@@ -1,8 +1,6 @@
 # 📈 Sistema de Agricultura de Precisão com Assistentes de IA
 ## 🛠️ Layout do Diagrama
-## Tipo: Arquitetura em Camadas
-
-Camadas (de baixo para cima):
+## Arquitetura em Camadas
 - Camada Física: Sensores, Drones, Dispositivos IoT
 - Camada de Ingestão de Dados: Azure IoT Hub
 - Camada de Processamento: Backend (C#), Agentes de IA (Autogen), Modelos de Visão, RAG
