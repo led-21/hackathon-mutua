@@ -48,7 +48,7 @@ Camadas (de baixo para cima):
 - Backend ←→ API Tradução
 
 ## Camada de Armazenamento
-- Banco de Dados de Séries Temporais: (ex.: InfluxDB)
+- Banco de Dados de Séries Temporais
 - Repositório de Documentos: Manuais técnicos (FAO/EMBRAPA)
 - Banco de Dados Relacional: Perfis de usuários, feedbacks (ex.: SQL Server)
 
