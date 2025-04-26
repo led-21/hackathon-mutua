@@ -1,0 +1,23 @@
+@hackaton_microsoft_agro_HostAddress = https://localhost:7044
+
+
+### Classify HealthCheck
+GET {{hackaton_microsoft_agro_HostAddress}}/health
+
+### Classify Image
+POST {{hackaton_microsoft_agro_HostAddress}}/classify_pest?url=https://bugwoodcloud.org/images/1536x1024/1453261.jpg
+Content-Type: application/json
+
+### Classify Image Unidentified Pest
+POST {{hackaton_microsoft_agro_HostAddress}}/classify_pest?url=https://th.bing.com/th/id/OIP.cwsIlOBwr6ffJ2giNL9KwwHaE8?rs=1&pid=ImgDetMain
+Content-Type: application/json
+
+### Recomendation
+GET {{hackaton_microsoft_agro_HostAddress}}/control_insect_suggestion?pest=bicudo
+
+### Classify Get Questions
+GET {{hackaton_microsoft_agro_HostAddress}}/question?question=quais%20boas%20praticas%20de%20manejo%20de%20solo%20em%20lavouras%20de%20soja?
+
+### Classify Get Database
+GET {{hackaton_microsoft_agro_HostAddress}}/get_registered_products?pest=lagarta
+
