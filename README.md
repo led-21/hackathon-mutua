@@ -96,4 +96,4 @@ Camadas (de baixo para cima):
 - Agricultor envia feedback sobre o alerta → Atualizações aplicadas via CI/CD
 
 ## 📢 Observação
-Este projeto é uma evolução do projeto inicial hackathon-microsoft-agro.
+Este projeto é uma evolução do projeto inicial [hackathon-microsoft-agro.](https://github.com/led-21/hackathon-microsoft-agro) 3rd place Microsoft Hackathon Innovation Challenge December 2024.
