@@ -3,7 +3,7 @@
 ## Arquitetura em Camadas
 - Camada Física: Sensores, Drones, Dispositivos IoT
 - Camada de Ingestão de Dados: Azure IoT Hub
-- Camada de Processamento: Backend (C#), Agentes de IA (Autogen), Modelos de Visão, RAG
+- Camada de Processamento: Backend (C#), Agentes de IA, Modelos de Visão, RAG
 - Camada de Armazenamento: Bancos de Dados, Repositórios de Documentos
 - Camada de Aplicação: Interface Multilíngue, Relatórios, Alertas
 - Camada de Usuários: Agricultores, Cooperativas (Mobile/Web)
@@ -16,7 +16,7 @@
 
 ### Conexões:
 - Sensores/Drones → Azure IoT Hub (MQTT/HTTP - streaming em tempo real)
-- Drones ←→ Agente Autogen (atualização autônoma de rotas)
+- Drones ←→ Agente de IA (atualização autônoma de rotas)
 
 ## Camada de Ingestão de Dados
 - Azure IoT Hub: Coleta e roteamento dos dados de sensores e drones
@@ -28,10 +28,12 @@
 
 ## Camada de Processamento
 - Backend (C#): Orquestra o fluxo de dados e disponibiliza APIs
-- Agentes Autogen:
-  - Agente 1: Análise de déficits de água/nutrientes
-  - Agente 2: Detecção de pragas via processamento de imagens
-  - Agente 3: Otimização de rotas de drones
+- Agentes de IA (Semantic Kernel):
+  - Agente 1: Agente de IA: monitoramento
+  - Agente 2: Agente de IA: irrigação
+  - Agente 3: Agente de IA: controle de plantas daninhas
+  - Agente 4: Agente de IA: controle de insetos
+  - Agente 5: Agente de IA: fertilidade de solos
 - Agente de Visão: Classificação de imagens (saudável vs infestado)
 - Módulo RAG: Recuperação de documentos da FAO/EMBRAPA
 - Modelo Preditivo: Necessidade de irrigação baseada em dados climáticos
@@ -39,7 +41,7 @@
 
 ### Conexões:
 - Backend ←→ Azure IoT Hub
-- Backend → Agentes Autogen
+- Backend → Agentes de IA
 - Backend → Agente de Visão (imagens)
 - Backend ←→ Módulo RAG (consultas)
 - Backend ← Modelo Preditivo
@@ -47,7 +49,7 @@
 
 ## Camada de Armazenamento
 - Banco de Dados de Séries Temporais
-- Repositório de Documentos: Manuais técnicos (FAO/EMBRAPA)
+- Repositório de Documentos: Manuais técnicos
 - Banco de Dados Relacional: Perfis de usuários, feedbacks (ex.: SQL Server)
 
 ### Conexões:
