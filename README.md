@@ -50,7 +50,7 @@
 ## Camada de Armazenamento
 - Banco de Dados de Séries Temporais
 - Repositório de Documentos: Manuais técnicos
-- Banco de Dados Relacional: Perfis de usuários, feedbacks (ex.: SQL Server)
+- Banco de Dados Relacional: Perfis de usuários, Defensivos Registrados no MAPA, feedbacks, etc (ex.: SQL Server)
 
 ### Conexões:
 - Azure IoT Hub → Banco de Dados de Séries Temporais
