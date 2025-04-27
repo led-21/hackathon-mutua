@@ -68,8 +68,8 @@
 - Interface → Backend (feedback de usuários)
 
 ## Camada de Usuários
-- Agricultores: Acesso via aplicativo móvel (pequena escala)
-- Cooperativas: Acesso via painel web (grande escala)
+- Agricultores: Acesso via aplicativo móvel 
+- Cooperativas: Acesso via painel web 
 
 ### Conexões:
 - Usuários ↔ Interface Multilíngue
