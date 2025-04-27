@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroAISearch.AppHost", "Agr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroAISearch.ServiceDefaults", "AgroAISearch.ServiceDefaults\AgroAISearch.ServiceDefaults.csproj", "{3091410E-C0A4-4758-A4D8-ADBAAAC58B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackaton-microsoft-agro", "BackEnd\hackaton-microsoft-agro.csproj", "{68BD2B9B-DAD9-4B45-9880-D7B5E1179A06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hackaton-mutua-agro", "BackEnd\hackaton-mutua-agro.csproj", "{68BD2B9B-DAD9-4B45-9880-D7B5E1179A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,20 +11,16 @@ builder.AddServiceDefaults();
 // Adicionando a URL do Key Vault ao arquivo de configuração
 builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-// URL do Key Vault armazenada no appsettings.json
-var keyVaultUri = builder.Configuration["KeyVaultUri"];
-
-// Obter as credenciais do Service Principal armazenadas no appsettings.json
-var clientId = builder.Configuration["AzureAd:ClientId"];
-var clientSecret = builder.Configuration["AzureAd:ClientSecret"];
-var tenantId = builder.Configuration["AzureAd:TenantId"];
-
 // Configurando o Azure Key Vault usando o ClientSecretCredential
-var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-var uri = string.IsNullOrEmpty(keyVaultUri)
-    ? throw new InvalidOperationException("KeyVault URI is not configured.")
-    : new Uri(keyVaultUri);
-builder.Configuration.AddAzureKeyVault(uri, credential);
+string? keyVaultName = Environment.GetEnvironmentVariable("KEYVAULT_NAME");
+if (string.IsNullOrEmpty(keyVaultName))
+{
+    throw new InvalidOperationException("KeyVaultName environment variable is not set.");
+}
+
+builder.Configuration.AddAzureKeyVault(
+    new Uri($"https://{keyVaultName}.vault.azure.net/"), 
+    new DefaultAzureCredential());
 
 // Add database
 builder.Services.AddDbContext<CropProtectionContext>();
@@ -58,6 +54,9 @@ builder.Services.AddSingleton<IOrchestrator, Orchestrator>(o => new Orchestrator
         builder.Configuration["openai-deployment-name"]!)
     )
 );
+
+// Add Agents Service
+
 
 builder.Services.AddSingleton<SpeechService>(s => new SpeechService(
     builder.Configuration["speech-key"]!,
