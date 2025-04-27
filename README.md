@@ -35,7 +35,7 @@
   - Agente 4: Agente de IA: controle de insetos
   - Agente 5: Agente de IA: fertilidade de solos
 - Agente de Visão: Classificação de imagens (saudável vs infestado)
-- Módulo RAG: Recuperação de documentos da FAO/EMBRAPA
+- Módulo RAG: Recuperação de documentos (manual, pesquisa e bulas de defensivos)
 - Modelo Preditivo: Necessidade de irrigação baseada em dados climáticos
 - API de Tradução: Tradução multilíngue de alertas/relatórios
 
