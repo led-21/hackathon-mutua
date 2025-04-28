@@ -3,10 +3,33 @@ using hackaton_microsoft_agro.Data;
 using hackaton_microsoft_agro.Endpoints;
 using hackaton_microsoft_agro.Interface;
 using hackaton_microsoft_agro.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+
+builder.Services.AddDbContext<ApplicationIdentityContext>(options =>
+    options.UseSqlite("IdentityDB"));
+
+// Identity Configuration 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+    options.User.RequireUniqueEmail = false;
+    options.SignIn.RequireConfirmedEmail = false;
+})
+.AddEntityFrameworkStores<ApplicationIdentityContext>()
+.AddApiEndpoints()
+.AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 // Adicionando a URL do Key Vault ao arquivo de configuração
 builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
@@ -55,8 +78,6 @@ builder.Services.AddSingleton<IOrchestrator, Orchestrator>(o => new Orchestrator
     )
 );
 
-// Add Agents Service
-
 
 builder.Services.AddSingleton<SpeechService>(s => new SpeechService(
     builder.Configuration["speech-key"]!,
@@ -95,6 +116,12 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapIdentityApi<IdentityUser>()
+    .WithTags("Identity");
 
 app.AddMyEndpoints();
 
