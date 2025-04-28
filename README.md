@@ -1,7 +1,6 @@
 # 📈 Sistema de Agricultura de Precisão com Assistentes de IA
 ## Tela aplicativo
 ![Tela do applicativo](./tela_app.png)
-## 🛠️ Diagrama
 ## Arquitetura em Camadas
 - Camada Física: Sensores, Drones, Dispositivos IoT
 - Camada de Ingestão de Dados: Azure IoT Hub
