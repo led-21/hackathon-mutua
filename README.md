@@ -1,4 +1,6 @@
 # 📈 Sistema de Agricultura de Precisão com Assistentes de IA
+## Tela aplicativo
+![Tela do applicativo](./tela_app.png)
 ## 🛠️ Layout do Diagrama
 ## Arquitetura em Camadas
 - Camada Física: Sensores, Drones, Dispositivos IoT
@@ -7,7 +9,6 @@
 - Camada de Armazenamento: Bancos de Dados, Repositórios de Documentos
 - Camada de Aplicação: Interface Multilíngue, Relatórios, Alertas
 - Camada de Usuários: Agricultores, Cooperativas (Mobile/Web)
-
 ## 📡 Componentes e Conexões
 ## Camada Física
 - Sensores de Solo: Umidade, temperatura, nutrientes
