@@ -10,6 +10,7 @@
 - Camada de Usuários: Agricultores, Cooperativas (Mobile/Web)
 ## 📡 Componentes e Conexões
 ## Camada Física
+### Componentes:
 - Sensores de Solo: Umidade, temperatura, nutrientes
 - Drones: Imagens NDVI, monitoramento de saúde das plantas
 - Estações Meteorológicas: Dados climáticos em tempo real
@@ -19,6 +20,7 @@
 - Drones ←→ Agente de IA (atualização autônoma de rotas)
 
 ## Camada de Ingestão de Dados
+### Componentes:
 - Azure IoT Hub: Coleta e roteamento dos dados de sensores e drones
 
 ### Conexões:
@@ -27,6 +29,7 @@
 - Armazena dados brutos no Banco de Dados de Séries Temporais
 
 ## Camada de Processamento
+### Componentes:
 - Backend (C#): Orquestra o fluxo de dados e disponibiliza APIs
 - Agentes de IA (Semantic Kernel):
   - Agente 1: Agente de IA: monitoramento
@@ -48,6 +51,7 @@
 - Backend ←→ API Tradução
 
 ## Camada de Armazenamento
+### Componentes:
 - Banco de Dados de Séries Temporais
 - Repositório de Documentos: Manuais técnicos
 - Banco de Dados Relacional: Perfis de usuários, Defensivos Registrados no MAPA, feedbacks, etc (ex.: SQL Server)
@@ -58,6 +62,7 @@
 - Backend ←→ Banco de Dados Relacional
 
 ## Camada de Aplicação
+### Componentes:
 - Interface Multilíngue: Aplicativo Mobile/Web (Português, Hindi, Espanhol, etc.)
 - Relatórios Automatizados: PDFs/Planilhas traduzidos
 - Alertas em Tempo Real: Notificações push
@@ -68,6 +73,7 @@
 - Interface → Backend (feedback de usuários)
 
 ## Camada de Usuários
+### Componentes:
 - Agricultores: Acesso via aplicativo móvel 
 - Cooperativas: Acesso via painel web 
 
